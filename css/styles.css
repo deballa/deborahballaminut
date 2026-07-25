@@ -1,3 +1,255 @@
+:root{
+    --primary: #7c3aed;
+    --primary-dark: #6d28d9;
+    --secondary: #a855f7;
+
+    --background: #0b1020;
+    --surface: #161d2f;
+
+    --text: #ffffff;
+    --text-muted: #b5b5c3;
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #0e1324;
+    --bs-body-color: #ffffff;
+    --skills-card-bg: rgba(255, 255, 255, 0.045);
+    --skills-card-border: rgba(255, 255, 255, 0.1);
+    --skills-card-shadow: rgba(0, 0, 0, 0.2);
+    --project-card-bg: rgba(16, 24, 43, 0.88);
+    --project-card-border: rgba(255, 255, 255, 0.12);
+}
+
+[data-bs-theme="light"] {
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #212529;
+    --skills-card-bg: rgba(124, 58, 237, 0.04);
+    --skills-card-border: rgba(124, 58, 237, 0.14);
+    --skills-card-shadow: rgba(76, 29, 149, 0.1);
+    --project-card-bg: #ffffff;
+    --project-card-border: rgba(124, 58, 237, 0.16);
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: "Nunito", sans-serif;
+}
+
+.btn-primary{
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+
+    --bs-btn-hover-bg: var(--primary-dark);
+    --bs-btn-hover-border-color: var(--primary-dark);
+
+    --bs-btn-active-bg: var(--primary-dark);
+    --bs-btn-active-border-color: var(--primary-dark);
+}
+
+.text-primary{
+    color: var(--primary) !important;
+}
+
+.bg-primary{
+    background-color: var(--primary) !important;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--bs-body-color);
+}
+
+.text-purple {
+      color: #8b5cf6;
+    }
+
+    .btn-purple {
+      background: #7c3aed;
+      color: #fff;
+      border: none;
+    }
+
+
+
 .logo-header {
     max-height: 60px;
+}  
+
+main {
+    background-color: #ffffff05;
+    border-radius: 12px;
 }
+
+
+
+/*#region [Hero]*/
+
+/*#endregion [Hero]*/
+
+/*#region [Sobre mim]*/
+.card-skills {
+    min-height: 100%;
+    background-color: var(--skills-card-bg);
+    border: 1px solid var(--skills-card-border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px var(--skills-card-shadow);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card-skills:hover {
+    border-color: rgba(139, 92, 246, 0.55);
+    box-shadow: 0 12px 30px rgba(76, 29, 149, 0.2);
+    transform: translateY(-3px);
+}
+
+.card-skills .skill-icon {
+    width: fit-content;
+    margin-bottom: 1rem;
+    color: #8b5cf6;
+    font-size: 1.6rem;
+}
+
+.card-skills h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.card-skills p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/*#endregion [Sobre mim]*/
+
+/*#region [Projetos em destaque]*/
+.featured-projects {
+    border-top: 1px solid var(--project-card-border);
+}
+
+.projects-link,
+.project-details {
+    color: #8b5cf6;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.projects-link:hover,
+.project-details:hover {
+    color: #a78bfa;
+}
+
+.project-card {
+    background-color: var(--project-card-bg);
+    border: 1px solid var(--project-card-border);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(139, 92, 246, 0.55);
+    box-shadow: 0 16px 36px rgba(76, 29, 149, 0.2);
+    transform: translateY(-4px);
+}
+
+.project-preview {
+    position: relative;
+    display: grid;
+    min-height: 190px;
+    place-items: center;
+    overflow: hidden;
+    color: #7c3aed;
+    font-size: 4rem;
+}
+
+.project-preview::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 45%, rgba(124, 58, 237, 0.12));
+    content: "";
+}
+
+.project-preview-management {
+    background: linear-gradient(135deg, #eef3ff, #cddcff);
+}
+
+.project-preview-dashboard {
+    background: linear-gradient(135deg, #f7f9ff, #dce7ff);
+}
+
+.project-preview-app {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.65rem;
+    background: linear-gradient(135deg, #efeaff, #d9ccff);
+    padding-top: 1.5rem;
+}
+
+.preview-browser {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 6px 6px 0 0;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.preview-browser span {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background-color: #a5b4d4;
+}
+
+.phone {
+    position: relative;
+    z-index: 1;
+    width: 55px;
+    height: 125px;
+    border: 4px solid #25213d;
+    border-bottom: 0;
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(180deg, #ffffff, #e9e2ff);
+}
+
+.phone-center {
+    display: grid;
+    width: 63px;
+    height: 145px;
+    place-items: center;
+    color: #7c3aed;
+    font-size: 1.5rem;
+}
+
+.project-tag {
+    border-radius: 4px;
+    background-color: rgba(124, 58, 237, 0.18);
+    color: #a78bfa;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+}
+
+.project-card .card-body {
+    padding: 1.25rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+@media (max-width: 767.98px) {
+    .project-preview {
+        min-height: 170px;
+    }
+}
+/*#endregion [Projetos em destaque]*/
