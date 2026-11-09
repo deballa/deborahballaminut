@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déborah Ballaminut - Devenvolvedora Full Stack</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contato.css">
+</head>
+
+<body id="inicio" class="contact-page d-flex flex-column min-vh-100">
+
+    <!-- MENU -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-header img-fluid" src="img/logo2.png" alt="Logo Déborah Ballaminut">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#projetos">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#">Artigos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contato" class="contact-main flex-grow-1 d-flex align-items-center">
+        <section class="contato w-100" aria-labelledby="contact-title">
+            <div class="container py-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 contact-copy">
+                        <h1 id="contact-title" class="contact-title display-2 fw-bold">
+                            Vamos<br><span class="text-purple">Conversar?</span>
+                        </h1>
+                        <p class="contact-description">Estou sempre aberta a novos desafios e colaborações 
+                            em projetos de <strong>alto impacto.</strong></p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form class="contact-form" id="contact-form" aria-describedby="form-note">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label for="contact-name" class="form-label contact-label">NOME COMPLETO</label>
+                                    <input type="text" class="form-control" id="contact-name" name="name" placeholder="Seu nome" autocomplete="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contact-email" class="form-label contact-label">ENDEREÇO DE E-MAIL</label>
+                                    <input type="email" class="form-control" id="contact-email" name="email" placeholder="email@exemplo.com" autocomplete="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="contact-message" class="form-label contact-label">MENSAGEM</label>
+                                    <textarea class="form-control" id="contact-message" name="message" rows="5" placeholder="Como posso ajudar?" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-light w-100 contact-submit">ENVIAR MENSAGEM <i class="fa-regular fa-paper-plane ms-3" aria-hidden="true"></i></button>
+                                    <p id="form-note" class="contact-form-note mb-0 mt-3" role="status">=)</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>  
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <a class="footer-brand" href="#inicio" aria-label="Déborah Ballaminut — início">
+                <img src="img/logo2.png" alt="Déborah Ballaminut" class="footer-logo">
+            </a>
+            <nav class="footer-nav" aria-label="Navegação do rodapé">
+                <a href="#inicio">Início</a>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+                <a class="footer-social" aria-label="LinkedIn de Déborah Ballaminut" aria-disabled="true" data-contact="linkedin">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            document.getElementById('form-note').textContent = 'Mensagem não enviada: o serviço de envio ainda não está configurado.';
+        });
+    </script>
+
+</body>
+</html>

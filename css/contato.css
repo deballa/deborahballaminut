@@ -1,0 +1,63 @@
+/*#region [Página de contato]*/
+.contact-page {
+    min-height: 100svh;
+}
+.contact-page .contact-main {
+    background: transparent;
+    border-radius: 0;
+    padding: 2rem 0;
+}
+.contact-page .site-footer { margin-top: auto; }
+.contact-title {
+    margin-bottom: 2rem;
+}
+.contact-description {
+    max-width: 33rem;
+    color: #9298a7;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 2.8rem;
+}
+.contact-description strong { color: #c4c4cb; }
+
+
+.contact-label {
+    margin-bottom: .65rem;
+}
+.contact-form {
+    padding: clamp(1.5rem, 3.5vw, 3rem);
+    background: var(--project-card-bg);
+    border: 1px solid var(--project-card-border);
+    border-radius: 2.5rem;
+}
+.contact-form .form-control {
+    background: var(--bs-body-bg);
+    border: 1px solid var(--project-card-border);
+    border-radius: 1rem;
+    color: #fff;
+    padding: 1.1rem 1.4rem;
+}
+.contact-form .form-control::placeholder { color: #808b9e; }
+.contact-form .form-control:focus {
+    border-color: #b692ff;
+    box-shadow: 0 0 0 .2rem rgb(182 146 255 / 18%);
+}
+.contact-form textarea { min-height: 8.2rem; resize: vertical; }
+.contact-submit {
+    padding: 1.15rem;
+    border-radius: 1rem;
+    font-size: .8rem;
+    font-weight: 900;
+    letter-spacing: .15em;
+    color: #141a2c;
+}
+.contact-form-note { color: #959fb2; font-size: .8rem; }
+
+@media (max-width: 575.98px) {
+    .contact-page .contact-main { padding: 0; }
+    .contact-description { font-size: 1.05rem; margin-bottom: 2rem; }
+    .contact-form { border-radius: 1.5rem; }
+}
+
+/*#endregion [Página de contato]*/
